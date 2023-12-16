@@ -1,4 +1,5 @@
 import React from "react"
+import Input from "./Input";
 
 const Form = () => {
      
@@ -18,8 +19,8 @@ const Form = () => {
      }
      return (
       <>
-        <input type="text" onChange={changeHandler} ref={inputRef}/>
-        <button style={{margin:"5px"}} onClick={clickHandler}>Focus Input</button>
+        <Input type="text" onChange={changeHandler} ref={inputRef}/>
+        <button style={{margin:"5px"}} onClick={clickHandler}>{text.length == 0 ? "Focus input":"Alert Text"}</button>
         <p>input text : {text}</p>
         <p>No. of Render : {render.current}</p>
         
